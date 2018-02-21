@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 18:30:58 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/02/08 16:52:06 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/02/14 16:47:58 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int     readlinewidth(int fd)
 
     (void) memset((void *) buff, 0, (size_t) 2);
     nbread = read(fd, (void *) buff, (size_t) 2);
-    if (nbread == -1 || nbread == 0)
+    if (nbread <= 0)
         return (-1);
     buff[1] = '\0';
     return (atoi(buff));
