@@ -6,15 +6,21 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 18:41:03 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/04/03 20:42:12 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/04/16 13:21:57 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "./get_next_line.h"
 
-int get_next_line(const int fd, char **line)
+int		get_next_line(const int fd, char **line)
 {
-    static t_list   *file;
-    t_list          line;
+	static t_gnl_list	*file;
+    t_gnl_list          line;
+	size_t				len;
+	int					i;
+
+	i = 0;
+	len = 0;
+	line = NULL;
 }
