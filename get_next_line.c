@@ -6,14 +6,14 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 18:41:03 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/04/20 17:32:33 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/04/27 15:34:18 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "./get_next_line.h"
 
-static int gnl_write(t_list **l, char **line, int res)
+static int	gnl_write(t_list **l, char **line, int res)
 {
 	char	*str;
 	t_list	*tmp;
@@ -39,12 +39,12 @@ static int gnl_write(t_list **l, char **line, int res)
 	return (res);
 }
 
-static int gnl_read(t_list **list, int fd, size_t len, t_buff *buff)
+static int	gnl_read(t_list **list, int fd, size_t len, t_buff *buff)
 {
-	int ret;
-	t_list *tmp;
-	size_t i;
-	size_t j;
+	int		ret;
+	t_list	*tmp;
+	size_t	i;
+	size_t	j;
 
 	j = 0;
 	while (!buff->index && ++j && (ret = read(fd, buff->mem, BUFF_SIZE)))
@@ -63,10 +63,10 @@ static int gnl_read(t_list **list, int fd, size_t len, t_buff *buff)
 	return (j == 0 ? 1 : 0);
 }
 
-int		get_next_line(const int fd, char **line)
+int			get_next_line(const int fd, char **line)
 {
 	t_list			*list;
-    static t_buff 	buff;
+	static t_buff	buff;
 	size_t			len;
 	int				i;
 

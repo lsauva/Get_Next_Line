@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 18:41:00 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/04/20 17:18:36 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/04/27 15:33:03 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 typedef struct		s_list
 {
-	char			*mem;
+	char			*content;
 	int				index_fd;
 	struct s_list	*next;
 }					t_list;
