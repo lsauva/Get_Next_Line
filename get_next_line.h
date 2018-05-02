@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 18:41:00 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/05/02 18:16:41 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/05/02 20:17:44 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 # define EOL '\n'
 # define EOF '\0'
 
-typedef struct		s_list
+/* typedef struct		s_list
 {
 	char			*content;
-	int				index_fd;
+	size_t			index_fd;
 	struct s_list	*next;
-}					t_list;
+}					t_list; */
 
 typedef struct		s_buff
 {
