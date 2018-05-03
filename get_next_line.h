@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 18:41:00 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/05/02 20:17:44 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/05/03 17:32:24 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
 # include "./libft/libft.h"
 # define BUFF_SIZE 50
 # define EOL '\n'
