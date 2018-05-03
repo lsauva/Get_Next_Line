@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 18:41:03 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/05/03 14:51:22 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/05/03 15:28:28 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static int	gnl_read(t_list **list, int fd, size_t len, t_buff *buff)
 		if (ret == -1 || !(tmp = ft_lstnew(buff->mem, ret + 1)))
 			return (-1);
 		ft_lstadd_end(list, tmp);
-		while (buff->mem[i++] && buff->mem[i] != '\n' && ++(*len) > 0)
+		while (buff->mem[i++] && buff->mem[i] != '\n' && ++len > 0)
 			i++;
 		if (buff->mem[i++] == '\n' && (buff->index = i))
 			return (1);
@@ -86,7 +86,7 @@ int			get_next_line(const int fd, char **line)
 		else
 			buff.index = 0;
 	}
-	if ((i = gnl_read(&list, fd, &len, &buff)) == -1)
+	if ((i = gnl_read(&list, fd, len, &buff)) == -1)
 		return (-1);
 	return ((*line = ft_strnew(len)) ? gnl_write(&list, line, i) : -1);
 }
